@@ -1,0 +1,97 @@
+name: mumble_sounds
+description: Samples which might be useful in a voip app, derived from the mumble project
+repository: https://github.com/EPNW/mumble_sounds
+version: 1.0.0
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/Critical_16000.wav
+    - assets/Critical_16000.f32le
+    - assets/Critical_44100.wav
+    - assets/Critical_44100.f32le
+    - assets/Critical_48000.wav
+    - assets/Critical_48000.f32le
+    - assets/Off_16000.wav
+    - assets/Off_16000.f32le
+    - assets/Off_44100.wav
+    - assets/Off_44100.f32le
+    - assets/Off_48000.wav
+    - assets/Off_48000.f32le
+    - assets/On_16000.wav
+    - assets/On_16000.f32le
+    - assets/On_44100.wav
+    - assets/On_44100.f32le
+    - assets/On_48000.wav
+    - assets/On_48000.f32le
+    - assets/PermissionDenied_16000.wav
+    - assets/PermissionDenied_16000.f32le
+    - assets/PermissionDenied_44100.wav
+    - assets/PermissionDenied_44100.f32le
+    - assets/PermissionDenied_48000.wav
+    - assets/PermissionDenied_48000.f32le
+    - assets/RecordingStateChanged_16000.wav
+    - assets/RecordingStateChanged_16000.f32le
+    - assets/RecordingStateChanged_44100.wav
+    - assets/RecordingStateChanged_44100.f32le
+    - assets/RecordingStateChanged_48000.wav
+    - assets/RecordingStateChanged_48000.f32le
+    - assets/SelfMutedDeafened_16000.wav
+    - assets/SelfMutedDeafened_16000.f32le
+    - assets/SelfMutedDeafened_44100.wav
+    - assets/SelfMutedDeafened_44100.f32le
+    - assets/SelfMutedDeafened_48000.wav
+    - assets/SelfMutedDeafened_48000.f32le
+    - assets/ServerConnected_16000.wav
+    - assets/ServerConnected_16000.f32le
+    - assets/ServerConnected_44100.wav
+    - assets/ServerConnected_44100.f32le
+    - assets/ServerConnected_48000.wav
+    - assets/ServerConnected_48000.f32le
+    - assets/ServerDisconnected_16000.wav
+    - assets/ServerDisconnected_16000.f32le
+    - assets/ServerDisconnected_44100.wav
+    - assets/ServerDisconnected_44100.f32le
+    - assets/ServerDisconnected_48000.wav
+    - assets/ServerDisconnected_48000.f32le
+    - assets/TextMessage_16000.wav
+    - assets/TextMessage_16000.f32le
+    - assets/TextMessage_44100.wav
+    - assets/TextMessage_44100.f32le
+    - assets/TextMessage_48000.wav
+    - assets/TextMessage_48000.f32le
+    - assets/UserJoinedChannel_16000.wav
+    - assets/UserJoinedChannel_16000.f32le
+    - assets/UserJoinedChannel_44100.wav
+    - assets/UserJoinedChannel_44100.f32le
+    - assets/UserJoinedChannel_48000.wav
+    - assets/UserJoinedChannel_48000.f32le
+    - assets/UserKickedYouOrByYou_16000.wav
+    - assets/UserKickedYouOrByYou_16000.f32le
+    - assets/UserKickedYouOrByYou_44100.wav
+    - assets/UserKickedYouOrByYou_44100.f32le
+    - assets/UserKickedYouOrByYou_48000.wav
+    - assets/UserKickedYouOrByYou_48000.f32le
+    - assets/UserLeftChannel_16000.wav
+    - assets/UserLeftChannel_16000.f32le
+    - assets/UserLeftChannel_44100.wav
+    - assets/UserLeftChannel_44100.f32le
+    - assets/UserLeftChannel_48000.wav
+    - assets/UserLeftChannel_48000.f32le
+    - assets/UserMutedYouOrByYou_16000.wav
+    - assets/UserMutedYouOrByYou_16000.f32le
+    - assets/UserMutedYouOrByYou_44100.wav
+    - assets/UserMutedYouOrByYou_44100.f32le
+    - assets/UserMutedYouOrByYou_48000.wav
+    - assets/UserMutedYouOrByYou_48000.f32le
