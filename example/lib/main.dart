@@ -12,9 +12,20 @@ void main() {
   runApp(MyApp());
 }
 
-Future<void> _ffplay(Stream<List<int>> data) async {
-  Process p =
-      await Process.start('ffplay', ['-i', '-', '-nodisp', '-autoexit']);
+Future<void> _ffplay(
+    Stream<List<int>> data, String format, int sampleRate) async {
+  Process p = await Process.start('ffplay', [
+    '-i',
+    '-',
+    '-f',
+    format,
+    '-ar',
+    sampleRate.toString(),
+    '-ac',
+    '1',
+    '-nodisp',
+    '-autoexit'
+  ]);
   p.stdout.transform(ascii.decoder).drain();
   p.stderr.transform(ascii.decoder).drain();
   await p.stdin.addStream(data);
@@ -98,14 +109,22 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  static const AudioFormat _format = AudioFormat.s16le;
+  static const AudioSampleRate _sampleRate = AudioSampleRate.hz16000;
   void _playCurrent(BuildContext context) {
     if (!_playing) {
-      Stream<List<int>> stream = _current.stream(context: context);
-      _ffplay(stream).then((_) => {
-            setState(() {
-              _playing = false;
-            })
-          });
+      Stream<List<int>> stream = _current.stream(
+          context: context,
+          frameTimeMs: 40,
+          format: _format,
+          sampleRate: _sampleRate);
+      _ffplay(stream, audioFormatToString(_format),
+              audioSampleRateToInt(_sampleRate))
+          .then((_) => {
+                setState(() {
+                  _playing = false;
+                })
+              });
       setState(() {
         _playing = true;
       });
